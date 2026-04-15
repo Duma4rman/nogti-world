@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { categories, getPopularNails, getRandomNails } from '../data/nails';
 import NailCard from '../components/NailCard';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const popularNails = getPopularNails(12);
-  const randomNails = getRandomNails(16);
+  const popularNails = useMemo(() => getPopularNails(12), []);
+  const randomNails = useMemo(() => getRandomNails(16), []);
 
   return (
     <div className="home-page">

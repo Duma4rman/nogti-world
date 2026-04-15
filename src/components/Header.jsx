@@ -29,8 +29,8 @@ const Header = () => {
 
           <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
             <Link to="/" className="nav-link">Главная</Link>
-            <a href="#categories" className="nav-link">Категории</a>
-            <a href="#popular" className="nav-link">Популярные</a>
+            <Link to="/#categories" className="nav-link">Категории</Link>
+            <Link to="/#popular" className="nav-link">Популярные</Link>
             <button className="btn btn-primary" style={{ padding: '8px 20px' }}>
               Избранное ❤️
             </button>
